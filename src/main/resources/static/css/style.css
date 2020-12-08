@@ -143,6 +143,11 @@ body {
         https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
     */
     align-items: center;  /* y축 으로 center 정렬 */
+    transition: all 1s;
+}
+
+#header.on .inner {
+    height: 52px;
 }
 
 #header .inner .logo a {
@@ -176,6 +181,10 @@ body {
         tranlsateX();  x축 방향으로 이동
         tranlsateY();  y축 방향으로 이동
     */
+}
+
+#header.on .inner .logo div:nth-child(2){
+    opacity: 50%;
 }
 
 #header .search_box {
