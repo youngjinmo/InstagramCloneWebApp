@@ -349,7 +349,7 @@ body {
     color: #262626;
 }
 
-.heart_btn.on .sprite_heart_icon_outline {
+.sprite_heart_icon_outline.on {
     display: inline-block;
     background: url('../imgs/background01.png') no-repeat -26px -261px;
 }
