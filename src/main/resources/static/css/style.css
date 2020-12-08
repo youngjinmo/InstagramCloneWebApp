@@ -143,6 +143,11 @@ body {
         https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
     */
     align-items: center;  /* y축 으로 center 정렬 */
+    transition: all 1s;
+}
+
+#header.on .inner {
+    height: 62px;
 }
 
 #header .inner .logo a {
