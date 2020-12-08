@@ -1,7 +1,6 @@
 const heart = document.querySelector('.heart_btn');
 const header = document.querySelector('#header');
 const sidebox = document.querySelector('.side_box');
-
 heart.addEventListener('click', function(){
     console.log('liked!');
     heart.classList.toggle('on');
@@ -9,7 +8,7 @@ heart.addEventListener('click', function(){
 
 function resizeFunc(){
     if(pageYOffset>=10){
-        const calcWith = (window.innerWidth*0.5)+180;
+        let calcWith = (window.innerWidth*0.5)+180;
         sidebox.style.left = calcWith+'px';
     }
 }
