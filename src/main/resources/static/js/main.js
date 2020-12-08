@@ -56,6 +56,6 @@ function scrollFunc(){
     }
 }
 
-window.addEventListener('click', delegationFunc);
+delegation.addEventListener('click', delegationFunc);
 window.addEventListener('scroll', scrollFunc);
 window.addEventListener('scroll', scrollFunc);
