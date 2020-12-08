@@ -6,7 +6,6 @@ const delegation = document.querySelector('.contents_box');
 heart.addEventListener('click', function(){
     console.log('liked!');
     heart.classList.toggle('on');
-
 });
 
 function delegationFunc(e){
@@ -23,6 +22,18 @@ function delegationFunc(e){
 
     if(elem.matches('[data-name="heartbeat"]')){
         console.log('좋아요!');
+
+        $.ajax({
+            type:'POST', 
+            url:'data/like.json',
+            data:{pk},
+            dataType:'json',
+            success:function(response){
+                var likedCount = document.querySelector('#like-count-37');
+                likedCount.innerHTML = '좋아요 '+response.like_count+'개';
+            }
+        });
+
     }
     else if(elem.matches('[data-name="bookmarked"]')){
         console.log('북마크!');
@@ -47,14 +58,22 @@ function scrollFunc(){
     
     if(pageYOffset>=10){
         header.classList.add('on');
-        sidebox.classList.add('on');
+        if(sidebox){
+            sidebox.classList.add('on');
+        }
         resizeFunc();
     } else {
         header.classList.remove('on');
-        sidebox.classList.remove('on');
-        sidebox.removeAttribute('style');
+        if(sidebox){
+            sidebox.classList.remove('on');
+            sidebox.removeAttribute('style');    
+        }
     }
 }
+
+setTimeout(function(){
+    scrollTo(0,0)
+},100);
 
 delegation.addEventListener('click', delegationFunc);
 window.addEventListener('scroll', scrollFunc);
