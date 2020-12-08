@@ -336,6 +336,12 @@ body {
     color: #262626;
 }
 
+.heart_btn.on .sprite_heart_icon_outline {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -26px -261px;
+}
+
+
 
 .contents .comments_container {
     display: flex;
