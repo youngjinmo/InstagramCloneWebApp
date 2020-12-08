@@ -1,0 +1,579 @@
+/* sprite로 가져온 icon 집합 */
+
+.sprite_insta_icon {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -53px -235px;
+    width: 22px;
+    height: 22px;
+}
+
+.sprite_write_logo {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -94px -72px;
+    width: 103px;
+    height: 29px;
+}
+
+.sprite_compass_icon {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -130px -286px;
+    width: 23px;
+    height: 23px;
+}
+
+.sprite_user_icon_outline {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -272px -182px;
+    width: 22px;
+    height: 24px;
+}
+
+.sprite_heart_icon_outline {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -52px -261px;
+    width: 24px;
+    height: 22px;
+}
+
+.sprite_small_search_icon {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -337px -246px;
+    width: 10px;
+    height: 10px;
+}
+
+.sprite_more_icon {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -301px -218px;
+    width: 15px;
+    height: 3px;
+}
+
+.sprite_bubble_icon {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -239px -202px;
+    width: 24px;
+    height: 24px;
+}
+
+.sprite_share_icon {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -324px -52px;
+    width: 21px;
+    height: 24px;
+}
+
+.sprite_bookmark_outline {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -237px -286px;
+    width: 19px;
+    height: 24px;
+}
+
+.sprite_small_heart_icon_outline {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -323px -274px;
+    width: 12px;
+    height: 11px;
+}
+
+.sprite_camera_icon {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -271px -104px;
+    width: 24px;
+    height: 22px;
+}
+
+.sprite_insta_big_logo {
+    display: inline-block;
+    background: url('../imgs/background02.png') no-repeat -98px -150px;
+    width: 175px;
+    height: 51px;
+}
+
+.sprite_plus_icon {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -187px -202px;
+    width: 23px;
+    height: 23px;
+}
+
+/* 여기까지 icon */
+
+/* 글자 사이즈 */
+.m_text {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.s_text {
+    font-style: 12px;
+}
+
+
+body {
+    background: #fafafa;
+}
+
+#header {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#header .inner {
+    width: 975px;
+    height: 75px;
+    margin: 0 auto;
+    display: flex;   /* 선택자의 아이템들이 수평으로 나열. */
+    justify-content: space-between;  
+    /*
+        justify-content: center;  x축으로 center 정렬
+        justify-content: space-between;  양쪽으로 아이템 뻗어서 정렬
+
+        more details from
+        https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+    */
+    align-items: center;  /* y축 으로 center 정렬 */
+}
+
+#header .inner .logo a {
+    color: transparent;
+}
+
+#header .inner .logo .sprite_insta_icon {
+    position: relative;
+    margin-right: 30px;
+}
+
+/* : 을 찍으면 가상 선택자 */
+#header .inner .logo .sprite_insta_icon:after {
+    content: '';
+    width: 1px;
+    height: 28px;
+    background: #000;
+    position: absolute;
+    right: -15px;
+    top: -3px;
+}
+
+#header .inner .logo div {
+    /* log 클래스 내 로고들에 수직 가운데 정렬 */
+    vertical-align: middle;
+}
+
+#header .inner .logo div:nth-child(2){
+    transform: translateY(2px);
+    /*
+        tranlsateX();  x축 방향으로 이동
+        tranlsateY();  y축 방향으로 이동
+    */
+}
+
+#header .search_box {
+    vertical-align: middle;
+}
+
+#header .search_box {
+    position: relative;
+}
+
+#header .inner .search_box .fake_field {
+    color: #999;
+}
+
+#search-field {
+    width: 200px;
+    height: 28px;
+    background: #fafafa;
+    border: solid 1px #dbdbdb;
+    border-radius: 5px;   /* boarder 모서리 둥글게 지정 */
+    padding: 3px 30px; /* 왼쪽 px는 위아래, 오른쪽 px는 양쪽으로 적용 */
+    color: #999;
+    font-weight: 400;
+    text-align: left;
+    font-size: 14px;
+    outline: none;
+}
+
+/* :: 입력하면 속성에 접근 */
+#search-field::placeholder {
+    font-size: 0;   
+}
+
+/* focus하면 placeholder내 font-size 변경 */
+#search-field:focus::placeholder {
+    font-size: 14px;
+}
+
+
+#header .search_box .fake_field {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);  /* 뭐지 이거..? */
+    pointer-events: none; /* fake-field 클래스 Span이 pointer도 인식되서 글자를 클릭해도 Search가 왼쪽으로 밀리지 않는걸 밀리도록 설정 */
+}
+
+/* ~ 가장 가까운 class/id 로 접근 */
+#search-field:focus ~ .fake_field > span:nth-child(1) {
+    transform: translateX(-115px);
+}
+
+#search-field:focus ~ .fake_field > span:nth-child(2) {
+    display: none;
+}
+
+#header .right_icons {
+    display: flex;
+    width: 132px;
+    justify-content: space-between;
+}
+
+
+
+#main_container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    /*
+        컨텐츠를 밀때엔 padding-top 아래 컨텐츠가 위를 밀땐
+    */
+}
+
+#main_container .inner {
+    width: 935px;
+    position: relative;
+}
+
+#main_container .inner .contents {
+    max-width: 614px;
+    /*height: 500px;*/
+    /*
+        height를 없애면 자식들만큼 height가 늘어난다.
+    */
+    border: 0.09px solid rgba(0,0,0,0.09);
+    border-radius: 5px;
+    margin-bottom: 60px;
+    background: white;
+}
+
+
+
+.contents .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.contents .top .user_container .profile_img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.contents .top .user_container .profile_img img {
+    width: 100%;
+}
+
+.contents .top .user_container .nick_name {
+    cursor: pointer;
+}
+
+.contents .top .user_container {
+    display: flex;
+}
+
+.contents .top .sprite_more_icon {
+    cursor: pointer;
+}
+
+.contents .img_section {
+    overflow: hidden;  
+    /* 
+        overflow : hidden
+        자식의 영역이 부모의 영역을 초과할경우 자르고 부모영역까지만 보이도록
+        more details from 
+        https://www.w3schools.com/cssref/tryit.asp?filename=trycss_overflow
+    */
+}
+
+.contents .img_section img {
+    width: 100%;  /* 부모 영역의 넓이만큼 적용 */
+}
+
+
+.contents .bottom_icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.contents .bottom_icon .left_icons {
+    display: flex;
+}
+
+.contents .bottom_icon .left_icons > div {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.contents .bottom_icon .right_icons > div {
+    cursor: pointer;
+}
+
+.contents .likes {
+    padding: 5px 20px;
+    color: #262626;
+}
+
+
+.contents .comments_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.contents .comments_container .comments {
+    display: flex;
+    font-size: 14px;
+}
+
+.contents .comments_container .comments .nickname {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+.contents .timer {
+    font-size: 10px;
+    letter-spacing: 0.3px;  /* 글자 간격 */
+    color: #999;
+    border-bottom: 1px solid rgba(0,0,0,0.09);
+    padding: 10px 20px;
+}
+
+
+.contents .comment_field {
+    min-height: 56px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.contents .comment_field input {
+    width: 100%;
+    height: 56px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/* input field 에 마우스 클릭하면 publish 버튼 활성화 */
+.contents .comment_field input:focus ~ .btn_upload {
+    pointer-events: initial;
+    opacity: 1;
+}
+
+.contents .comment_field .btn_upload {
+    color: #3897f0;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+
+.side_box {
+    width: 293px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+}
+
+.side_box .profile_thumb {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.side_box .profile_thumb img {
+    width: 100%;
+    height: 100%;
+}
+
+.side_box .user_profile {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #130303;
+    padding-bottom: 10px;
+}
+
+.side_box .user_profile .user_name {
+    font-size: 12px;
+    color: #999;
+}
+
+.side_box > article {
+    border: 1px solid rgba(0,0,0,0.09);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 291px;
+    font-size: 14px;
+    color: #262626;
+    font-weight: bold;
+    background: white;
+}
+
+.side_box > article > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: #999;
+}
+
+.side_box .more {
+    font-size: 12px;
+    color: #262626;
+    cursor: pointer;
+}
+
+.users_thumb {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.users_thumb .profile_thumb {
+    width: 34px;
+    height: 34px;
+}
+
+.users_thumb .detail .id {
+    margin-bottom: 5px;
+}
+
+.users_thumb .time {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: #999;
+}
+
+.side_box .scroll_inner {
+    /* 높이를 고정하고, y축에만 auto를 주어 스크롤효과 */
+    height: 182px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*
+        위의 스타일 코드는 아래의 코드와 똑같다.
+        overflow: hidden auto; 
+    */
+}
+
+.hidden_menu {
+    width: 600px;
+    height: 100px;
+    /* background: transparent; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.09);
+    border-radius: 3px;
+}
+
+.hidden_menu .scroll_inner {
+    width: auto;
+    height: 100px;
+    overflow-x: auto;
+    /* overflow-x : 항목이 많아지면 자동으로 스크롤 생성 */
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.hidden_menu .scroll_inner .user {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    justify-content: space-between;
+}
+
+.hidden_menu .scroll_inner .user .id {
+    font-size: 12px;
+    color: #262626;
+}
+
+.hidden_menu .thumb_img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hidden_menu .thumb_img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* responsive web design */
+@media screen  and (max-width:1000px) {
+    /*좌우값이 1000px 이하가 되었을때 수행*/
+    #header .inner {
+        width: 97.5%;
+    }
+
+    #main_container {
+        padding-top: 220px;
+    }
+
+    #main_container .inner {
+        width: 93.5%;
+    }
+
+    .side_box {
+        display: none;
+    }
+
+    .contents_box {
+        display: flex;
+        flex-direction: column;
+        /* flex-direction : column
+        일렬로 줄세우는 정렬  */
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:650px) {
+    #header .search_box {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1000px){
+    .hidden_menu {
+        display: none;
+    }
+}

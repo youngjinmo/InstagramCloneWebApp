@@ -1,10 +1,389 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>welcome</title>
-</head>
-<body>
-<h1>Welcome Spring Boot</h1>
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Instagram Clone</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+
+    <section id="container">
+      <header id="header">
+        <section class="inner">
+            <h1 class="logo">
+              <a href="index.html">
+                <div class="sprite_insta_icon"></div>
+                <div class="sprite_write_logo"></div>
+              </a>
+            </h1>
+
+            <div class="search_box">
+              <input type="text" placeholder="Search" id="search-field">
+              <div class="fake_field">
+                <span class="sprite_small_search_icon"></span>
+                <span>Search</span>
+              </div>
+            </div>
+
+            <div class="right_icons">
+              <div class="sprite_camera_icon"></div>
+              <div class="sprite_compass_icon"></div>
+              <div class="sprite_heart_icon_outline"></div>
+              <div class="sprite_user_icon_outline"></div>
+            </div>
+
+        </section>
+
+      </header>
+
+      <div class="hidden_menu">
+        <div class="scroll_inner">
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/kindtiger.jpg" alt="profile"></div>
+            <div class="id">Kind-Tiger</div>
+          </div>
+
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/proimg01.jpg" alt="profile"></div>
+            <div class="id">Alexander</div>
+          </div>
+
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/proimg02.jpg" alt="profile"></div>
+            <div class="id">Christina</div>
+          </div>
+
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/kindtiger.jpg" alt="profile"></div>
+            <div class="id">Kind-Tiger</div>
+          </div>
+
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/proimg01.jpg" alt="profile"></div>
+            <div class="id">Alexander</div>
+          </div>
+
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/proimg02.jpg" alt="profile"></div>
+            <div class="id">Christina</div>
+          </div>
+
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/kindtiger.jpg" alt="profile"></div>
+            <div class="id">Kind-Tiger</div>
+          </div>
+
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/proimg01.jpg" alt="profile"></div>
+            <div class="id">Alexander</div>
+          </div>
+
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/proimg02.jpg" alt="profile"></div>
+            <div class="id">Christina</div>
+          </div>
+        
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/kindtiger.jpg" alt="profile"></div>
+            <div class="id">Kind-Tiger</div>
+          </div>
+
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/proimg01.jpg" alt="profile"></div>
+            <div class="id">Alexander</div>
+          </div>
+
+          <div class="user">
+            <div class="thumb_img"><img src="imgs/proimg02.jpg" alt="profile"></div>
+            <div class="id">Christina</div>
+          </div>
+        </div>
+      </div>
+
+      <section id="main_container">
+        <div class="inner">
+
+          <div class="contents_box">
+            <!-- content 1 -->
+            <article class="contents">
+              <header class="top">
+                <div class="user_container">
+                  <div class="profile_img">
+                    <img src="imgs/kami.jpg">
+                  </div>
+                  
+                  <div class="user_name">
+                    <div class="nick_name m_text">Kami</div>
+                    <div class="country s_text">Seoul, South Korea</div>
+                  </div>
+                </div>
+                <div class="sprite_more_icon"></div>
+              </header>
+
+              <!-- image contents -->
+              <div class="img_section">
+                <img src="imgs/kami_7127.jpg" >
+              </div>
+
+              <!-- buttons  -->
+              <div class="bottom_icon">
+                <div class="left_icons">
+                  <div class="heart_btn">
+                    <div class="sprite_heart_icon_outline"></div>
+                  </div>
+                  <div class="sprite_bubble_icon"></div>
+                  <div class="sprite_share_icon"></div>
+                </div>
+                <div class="right_icons">
+                  <div class="sprite_bookmark_outline"></div>
+                </div>
+              </div>
+
+              <!-- likes -->
+              <div class="likes">
+                <span class="count_likes m_text">1,156</span> likes
+              </div>
+
+              <!-- Comments -->
+              <div class="comments_container">
+                <div class="comments">
+                  <div class="nickname m_text">dev.youngjin</div>
+                  <div class="s_text">까미 졸귀탱ㅠㅠㅠㅠ</div>
+                </div>
+                <div class="small_heart">
+                  <div class="sprite_small_heart_icon_outline"></div>
+                </div>
+              </div>
+
+              <!-- when comment wrote -->
+              <div class="timer">an hour ago</div>
+
+              <!-- 댓글 입력 필드 -->
+              <div class="comment_field">
+                <input type="text" placeholder="write comment..">
+                <div class="btn_upload m_text">publish</div>
+              </div>
+            </article>
+
+            <!-- content 2 -->
+            <article class="contents">
+                <header class="top">
+                  <div class="user_container">
+                    <div class="profile_img">
+                      <img src="imgs/kami.jpg">
+                    </div>
+                    
+                    <div class="user_name">
+                      <div class="nick_name m_text">Kami</div>
+                      <div class="country s_text">Seoul, South Korea</div>
+                    </div>
+                  </div>
+                  <div class="sprite_more_icon"></div>
+                </header>
+  
+                <!-- image contents -->
+                <div class="img_section">
+                  <img src="imgs/kami_6962.jpg" >
+                </div>
+  
+                <!-- buttons  -->
+                <div class="bottom_icon">
+                  <div class="left_icons">
+                    <div class="heart_btn">
+                      <div class="sprite_heart_icon_outline"></div>
+                    </div>
+                    <div class="sprite_bubble_icon"></div>
+                    <div class="sprite_share_icon"></div>
+                  </div>
+                  <div class="right_icons">
+                    <div class="sprite_bookmark_outline"></div>
+                  </div>
+                </div>
+  
+                <!-- likes -->
+                <div class="likes">
+                  <span class="count_likes m_text">3,076</span> likes
+                </div>
+  
+                <!-- Comments -->
+                <div class="comments_container">
+                  <div class="comments">
+                    <div class="nickname m_text">dev.youngjin</div>
+                    <div class="s_text">까미야!!!!!!</div>
+                  </div>
+                  <div class="small_heart">
+                    <div class="sprite_small_heart_icon_outline"></div>
+                  </div>
+                </div>
+  
+                <!-- when comment wrote -->
+                <div class="timer">a day ago</div>
+  
+                <!-- 댓글 입력 필드 -->
+                <div class="comment_field">
+                  <input type="text" placeholder="write comment..">
+                  <div class="btn_upload m_text">publish</div>
+                </div>
+            </article>
+
+            <!-- content 3 -->
+            <article class="contents">
+                <header class="top">
+                  <div class="user_container">
+                    <div class="profile_img">
+                      <img src="imgs/kami.jpg">
+                    </div>
+                    
+                    <div class="user_name">
+                      <div class="nick_name m_text">Kami</div>
+                      <div class="country s_text">Seoul, South Korea</div>
+                    </div>
+                  </div>
+                  <div class="sprite_more_icon"></div>
+                </header>
+  
+                <!-- image contents -->
+                <div class="img_section">
+                  <img src="imgs/kami_6792.jpg" >
+                </div>
+  
+                <!-- buttons  -->
+                <div class="bottom_icon">
+                  <div class="left_icons">
+                    <div class="heart_btn">
+                      <div class="sprite_heart_icon_outline"></div>
+                    </div>
+                    <div class="sprite_bubble_icon"></div>
+                    <div class="sprite_share_icon"></div>
+                  </div>
+                  <div class="right_icons">
+                    <div class="sprite_bookmark_outline"></div>
+                  </div>
+                </div>
+  
+                <!-- likes -->
+                <div class="likes">
+                  <span class="count_likes m_text">1,896</span> likes
+                </div>
+  
+                <!-- Comments -->
+                <div class="comments_container">
+                  <div class="comments">
+                    <div class="nickname m_text">sion</div>
+                    <div class="s_text">ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</div>
+                  </div>
+                  <div class="small_heart">
+                    <div class="sprite_small_heart_icon_outline"></div>
+                  </div>
+                </div>
+  
+                <!-- when comment wrote -->
+                <div class="timer">a week ago</div>
+  
+                <!-- 댓글 입력 필드 -->
+                <div class="comment_field">
+                  <input type="text" placeholder="write comment..">
+                  <div class="btn_upload m_text">publish</div>
+                </div>
+            </article>
+          </div>
+
+          <div class="side_box">
+          <!-- side_box를 aside 태그로 감싸면 responsive-web 적용불가 -->
+            <div class="user_profile">
+              <div class="profile_thumb">
+                <img src="imgs/me.jpg" alt="프로필">
+              </div>
+              <div class="detail">
+                <div class="id">dev.youngjin</div>
+                <div class="user_name">방황하는 개발자</div>
+              </div>
+            </div>
+
+            <article class="user_story">
+              <header class="story_header">
+                <div>Story</div>
+                <div class="more">more</div>
+              </header>
+
+              <div class="scroll_inner">
+                <div class="users_thumb">
+                  <div class="profile_thumb">
+                    <img src="imgs/kindtiger.jpg" alt="user_recommended">
+                  </div>
+                  <div class="detail">
+                    <div class="id">Kind-Tiger</div>
+                    <div class="time">an hour ago</div>
+                  </div>
+                </div>
+                <div class="users_thumb">
+                    <div class="profile_thumb">
+                      <img src="imgs/proimg01.jpg" alt="user_recommended">
+                    </div>
+                    <div class="detail">
+                      <div class="id">Alexander-Wang</div>
+                      <div class="time">2 hours ago</div>
+                    </div>
+                </div>
+                <div class="users_thumb">
+                    <div class="profile_thumb">
+                      <img src="imgs/proimg02.jpg" alt="user_recommended">
+                    </div>
+                    <div class="detail">
+                      <div class="id">Christina</div>
+                      <div class="time">3 hours ago</div>
+                    </div>
+                </div>
+                <div class="users_thumb">
+                    <div class="profile_thumb">
+                      <img src="imgs/proimg03.jpg" alt="user_recommended">
+                    </div>
+                    <div class="detail">
+                      <div class="id">super-Baby</div>
+                      <div class="time">4 hours ago</div>
+                    </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="user_recommendation">
+                <header class="recom_header">
+                  <div>Recommendation for you</div>
+                  <div class="more">more</div>
+                </header>
+
+                <div class="users_thumb">
+                    <div class="profile_thumb">
+                      <img src="imgs/proimg01.jpg" alt="user_recommended">
+                    </div>
+                    <div class="detail">
+                      <div class="id">Alexander-Wang</div>
+                      <div class="time">Love code.</div>
+                    </div>
+                </div>
+
+                <div class="users_thumb">
+                    <div class="profile_thumb">
+                      <img src="imgs/proimg02.jpg" alt="user_recommended">
+                    </div>
+                    <div class="detail">
+                      <div class="id">Christina</div>
+                      <div class="time">Drawing for my dream.</div>
+                    </div>
+                </div>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+    
+    </section>
+
+  </body>
 </html>
